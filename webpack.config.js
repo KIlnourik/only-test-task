@@ -1,18 +1,19 @@
 const path = require('path');
-const CopyPlugin = require("copy-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: './src/ts/main.ts',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'build'),
+    assetModuleFilename: 'fonts/[name][ext]',
     clean: true,
   },
   resolve: {
-    extensions: [".ts", ".tsx", ".js"],
+    extensions: ['.ts', '.tsx', '.js'],
     extensionAlias: {
-      ".js": [".js", ".ts"],
+      '.js': ['.js', '.ts'],
     }
   },
   devtool: 'source-map',
@@ -29,7 +30,8 @@ module.exports = {
             loader: 'ts-loader'
           }
         ]
-      }, {
+      },
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         use: ['babel-loader']
@@ -37,12 +39,20 @@ module.exports = {
       {
         test: /\.s[ac]ss$/i,
         use: [
-          // Creates `style` nodes from JS strings
           MiniCssExtractPlugin.loader,
-          // Translates CSS into CommonJS
-          "css-loader",
-          // Compiles Sass to CSS
-          "sass-loader",
+          {
+            loader: 'css-loader',
+          },
+          {
+            loader: 'resolve-url-loader',
+          },
+          {
+            loader:'sass-loader',
+            options: {
+              sourceMap: true,
+            }
+          }
+          ,
         ],
       },
     ]
@@ -51,13 +61,9 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'style.css'
     }),
-    new CopyPlugin({
+    new CopyWebpackPlugin({
       patterns: [
         {from: 'src/index.html'},
-        {
-          from: 'src/fonts',
-          to: 'fonts'
-        }
       ]
     })
   ],
