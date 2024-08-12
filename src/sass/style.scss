@@ -1,1 +1,11 @@
+// Нормализация стилей
+@import url('./vendor/normalize.scss');
+
+// Глобальный стили
+@import url('./global/fonts.scss');
+@import url('./global/variables.scss');
+@import url('./global/mixins.scss');
 @import url('./global/global.scss');
+
+// Header
+

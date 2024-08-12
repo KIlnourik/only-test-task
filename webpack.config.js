@@ -52,7 +52,13 @@ module.exports = {
       filename: 'style.css'
     }),
     new CopyPlugin({
-      patterns: [{from: "src/index.html"}]
+      patterns: [
+        {from: 'src/index.html'},
+        {
+          from: 'src/fonts',
+          to: 'fonts'
+        }
+      ]
     })
   ],
 };
