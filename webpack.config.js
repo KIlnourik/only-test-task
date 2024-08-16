@@ -38,11 +38,21 @@ module.exports = {
         use: ['babel-loader']
       },
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.scss$/,
         use: [
           MiniCssExtractPlugin.loader,
-          'css-loader',
-          'sass-loader',
+          {
+            loader:'css-loader',
+          },
+          {
+            loader: 'resolve-url-loader',
+          },
+          {
+            loader:'sass-loader',
+            options: {
+              sourceMap: true,
+            }
+          }
         ],
       },
     ]

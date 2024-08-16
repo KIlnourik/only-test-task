@@ -1,0 +1,46 @@
+.period {
+  &__title {
+    margin: 0;
+    margin-top: 56px;
+    padding-bottom: 58px;
+    font-family: "PTSans-Bold", "Arial", sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 72.46px;
+    letter-spacing: -0.02em;
+    color: $blue;
+    position: relative;
+
+    span {
+      color: $fuchsia;
+    }
+
+    &::after {
+      @include absolute-element(calc(100% - 20px), 1px);
+      background-color: $darker-grey;
+      left: 0;
+      bottom: 0;
+    }
+  }
+
+  &__subtitle {
+    display: none;
+  }
+
+  &__list {
+    @include list-reset();
+    @include display-flex(flex-start, space-between, left, row);
+    min-height: 114px;
+    gap: 25px;
+    overflow-x: hidden;
+  }
+
+  &__date {
+    margin-top: 20px;
+    min-width: 166px;
+  }
+
+  &__period__nav-btns {
+    display: none;
+  }
+}

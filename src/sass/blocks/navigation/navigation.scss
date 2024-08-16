@@ -1,0 +1,60 @@
+.navigation {
+  @include display-flex(center, flex-start, left, row);
+  min-height: 50px;
+  gap: 39px;
+
+
+  &__pages {
+    margin-top: 0;
+    margin-bottom: 7px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18.12px;
+  }
+
+  &__nav-btns {
+    @include display-flex(center, center, center, row);
+    gap: 8px;
+  }
+
+  &__nav-btn {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid $semi-transparent-dark-grey-blue;
+    background-color: transparent;
+
+    svg {
+      width: 3.125px;
+      height: 6.25px;
+      color: $dark-grey-blue;
+      fill: $dark-grey-blue;
+      background-color: transparent;
+    }
+
+    &--next svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__pagination {
+    @include list-reset();
+    @include display-flex(center, center, center, row);
+    gap: 10px;
+  }
+
+  &__pagination-item {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: $transparent-dark-grey-blue;
+
+    &:hover {
+      background-color: $dark-grey-blue;
+    }
+
+    &--active {
+      background-color: $dark-grey-blue;
+    }
+  }
+}

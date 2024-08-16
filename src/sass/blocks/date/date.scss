@@ -1,0 +1,20 @@
+.date {
+  &__title {
+    margin: 0;
+    margin-bottom: 15px;
+    font-family: "BebasNeue", "Arial", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+    color: $blue;
+  }
+
+  &__desc {
+    font-family: "PTSans-Regular", "Arial", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20.3px;
+    text-align: left;
+    color: $dark-grey-blue;
+  }
+}

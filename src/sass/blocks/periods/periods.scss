@@ -1,0 +1,27 @@
+.periods {
+  margin: 0;
+  padding-left: 20px;
+  padding-top: 59px;
+
+  &__title {
+    margin: 0;
+    width: 123px;
+    font-family: "PTSans-Bold", "Arial", sans-serif;
+    color: $dark-grey-blue;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  &__list {
+    @include list-reset();
+    @include display-flex(flex-start, space-between, left, row);
+    height: auto;
+    overflow-x: hidden;
+  }
+
+  &__navigation {
+    margin-top: 78px;
+    margin-bottom: 13px;
+  }
+}
+

@@ -2,6 +2,15 @@
   box-sizing: border-box;
 }
 
+html {
+  background-color: $grey;
+}
+
+body {
+  font-family: "PTSans-Regular", "Arial", sans-serif;
+  color: $dark-grey-blue;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -18,5 +27,4 @@
 .container {
   margin: 0 auto;
   padding: 0;
-  box-sizing: border-box;
 }
