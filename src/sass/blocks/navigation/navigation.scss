@@ -3,7 +3,6 @@
   min-height: 50px;
   gap: 39px;
 
-
   &__pages {
     margin-top: 0;
     margin-bottom: 7px;
@@ -18,6 +17,9 @@
   }
 
   &__nav-btn {
+    @include display-flex(center, center, center, row);
+    margin: 0;
+    padding: 0;
     width: 25px;
     height: 25px;
     border-radius: 50%;
@@ -25,11 +27,12 @@
     background-color: transparent;
 
     svg {
-      width: 3.125px;
-      height: 6.25px;
+      margin: 0;
+      padding: 0;
+      width: 6.25px;
+      height: 12.5px;
       color: $dark-grey-blue;
-      fill: $dark-grey-blue;
-      background-color: transparent;
+      fill: none;
     }
 
     &--next svg {
