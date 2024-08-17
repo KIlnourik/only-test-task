@@ -27,38 +27,63 @@
   <main class="main">
     <section class="periods">
       <h1 class="periods__title">Исторические даты</h1>
-      <p class="periods__current-period">1991&nbsp;&nbsp;<span>2016</span></p>
-      <ol class="periods__list">
-        <li class="periods__item period period--active" data-period="1991-2016">
+      <div class="periods__revolver-wrapper revolver">
+        <p class="revolver__current-period">
+          1991&nbsp;&nbsp;<span>2016</span>
+        </p>
+        <ul class="revolver__bullets">
+          <li class="revolver__bullet revolver__bullet--active">
+            <span>Заголовок</span>
+          </li>
+          <li class="revolver__bullet">
+            <span></span>
+          </li>
+          <li class="revolver__bullet">
+            <span></span>
+          </li>
+          <li class="revolver__bullet">
+            <span></span>
+          </li>
+          <li class="revolver__bullet">
+            <span></span>
+          </li>
+          <li class="revolver__bullet">
+            <span></span>
+          </li>
+        </ul>
+      </div>
+      <ul class="periods__list">
+        <li class="periods__item period period--active" data-period="1991-2016" data-id="1">
           <h2 class="period__title">Red Hot Chili Peppers</h2>
           <ul class="period__list">
             <li class="period__date date">
               <h3 class="date__title">1991</h4>
-              <p class="date__desc">Выпущен альбом "Blood Sugar Sex Magik". «Give It Away» была первым синглом, которая
-                стала в конце концов самой популярной и узнаваемой песней группы.</p>
+                <p class="date__desc">Выпущен альбом "Blood Sugar Sex Magik". «Give It Away» была первым синглом,
+                  которая
+                  стала в конце концов самой популярной и узнаваемой песней группы.</p>
             </li>
             <li class="period__date date">
               <h3 class="date__title">1999</h4>
-              <p class="date__desc">Californication вышел как седьмой альбом группы. В альбоме три главных
-                рок-хита: «Scar Tissue», «Otherside» и «Californication».</p>
+                <p class="date__desc">Californication вышел как седьмой альбом группы. В альбоме три главных
+                  рок-хита: «Scar Tissue», «Otherside» и «Californication».</p>
             </li>
             <li class="period__date date">
               <h3 class="date__title">2002</h4>
-              <p class="date__desc">By the Way был выпущен 9 июля 2002 года. В него вошли четыре сингла: «By the Way»,
-                «The Zephyr Song», «Can't Stop» и «Universally Speaking».</p>
+                <p class="date__desc">By the Way был выпущен 9 июля 2002 года. В него вошли четыре сингла: «By the Way»,
+                  «The Zephyr Song», «Can't Stop» и «Universally Speaking».</p>
             </li>
             <li class="period__date date">
               <h3 class="date__title">2006</h4>
-              <p class="date__desc">В 2006 году группа выпустила альбом Stadium Arcadium. Было написано 38 треков с
-                целью разделения их на три отдельных альбома в течение шести месяцев,
-                но группа решила выпустить 28 треков в виде двойного альбома, и выпустили девять треков из десяти в
-                качестве би-сайдов.</p>
+                <p class="date__desc">В 2006 году группа выпустила альбом Stadium Arcadium. Было написано 38 треков с
+                  целью разделения их на три отдельных альбома в течение шести месяцев,
+                  но группа решила выпустить 28 треков в виде двойного альбома, и выпустили девять треков из десяти в
+                  качестве би-сайдов.</p>
             </li>
             <li class="period__date date">
               <h3 class="date__title">2016</h4>
-              <p class="date__desc">17 июня 2016 года вышел одиннадцатый студийный альбом группы — The Getaway,
-                спродюсированный Danger Mouse. Также доступны два сингла из альбома — «Dark Necessities» и «The
-                Getaway».</p>
+                <p class="date__desc">17 июня 2016 года вышел одиннадцатый студийный альбом группы — The Getaway,
+                  спродюсированный Danger Mouse. Также доступны два сингла из альбома — «Dark Necessities» и «The
+                  Getaway».</p>
             </li>
             <div class="period__nav-btns">
               <button class="period__nav-btn periods__nav-btn--prev"></button>
@@ -66,35 +91,36 @@
             </div>
           </ul>
         </li>
-        <li class="periods__item period" data-period="1992-2000">
+        <li class="periods__item period" data-period="1992-2000" data-id="2">
           <h2 class="period__title">Radiohead</h2>
           <ul class="period__list">
             <li class="period__date date">
               <h3 class="date__title">1992</h4>
-              <p class="date__desc">Дебютный EP Radiohead Drill был спродюсирован Хаффордом и Эджем, записан в Courtyard
-                Studios и выпущен в марте 1992 года.</p>
+                <p class="date__desc">Дебютный EP Radiohead Drill был спродюсирован Хаффордом и Эджем, записан в
+                  Courtyard
+                  Studios и выпущен в марте 1992 года.</p>
             </li>
             <li class="period__date date">
               <h3 class="date__title">1993</h4>
-              <p class="date__desc">В конце 1992 года группа полностью записала альбом Pablo Honey (вышел 22 февраля
-                1993 года), в сентябре 1992 вышел сингл «Creep».</p>
+                <p class="date__desc">В конце 1992 года группа полностью записала альбом Pablo Honey (вышел 22 февраля
+                  1993 года), в сентябре 1992 вышел сингл «Creep».</p>
             </li>
             <li class="period__date date">
               <h3 class="date__title">1994</h4>
-              <p class="date__desc">В марте вышел второй альбом The Bends. Синглы «Fake Plastic Trees», «High and
-                Dry[англ.]» и «Just» попали в британские чарты, а «Street Spirit(Fade Out)» достиг первой пятёрки.</p>
+                <p class="date__desc">В марте вышел второй альбом The Bends. Синглы «Fake Plastic Trees», «High and
+                  Dry[англ.]» и «Just» попали в британские чарты, а «Street Spirit(Fade Out)» достиг первой пятёрки.</p>
             </li>
             <li class="period__date date">
               <h3 class="date__title">1997</h4>
-              <p class="date__desc">16 июня 1997 года состоялся релиз OK Computer. Песни «Paranoid
-                Android», «Karma Police» и «No Surprises» были изданы как синглы. Наибольшего успеха достигла «Karma
-                Police» (14-е место в чарте Billboard Modern Rock).</p>
+                <p class="date__desc">16 июня 1997 года состоялся релиз OK Computer. Песни «Paranoid
+                  Android», «Karma Police» и «No Surprises» были изданы как синглы. Наибольшего успеха достигла «Karma
+                  Police» (14-е место в чарте Billboard Modern Rock).</p>
             </li>
             <li class="period__date date">
               <h3 class="date__title">2000</h4>
-              <p class="date__desc">Kid A вышел в октябре 2000 года. На нём Radiohead в очередной раз много
-                экспериментировали со звучанием, и в результате получился самый «электронный» на тот момент альбом
-                группы.</p>
+                <p class="date__desc">Kid A вышел в октябре 2000 года. На нём Radiohead в очередной раз много
+                  экспериментировали со звучанием, и в результате получился самый «электронный» на тот момент альбом
+                  группы.</p>
             </li>
             <div class="period__nav-btns">
               <button class="period__nav-btn periods__nav-btn--prev"></button>
@@ -102,32 +128,35 @@
             </div>
           </ul>
         </li>
-        <li class="periods__item period" data-period="1999-2017">
+        <li class="periods__item period" data-period="1999-2017" data-id="3">
           <h2 class="period__title">Linkin Park</h2>
           <ul class="period__list">
             <li class="period__date date">
               <h3 class="date__title">1999</h4>
-              <p class="date__desc">Группа выпустила дебютный альбом Hybrid Theory. Продюсером альбома стал Дон Гилмор.
-                Песни из альбома — «Crawling», «One Step Closer» и «In the End» — имели успех в хит-парадах,
-                а клип «In the End», транслировавшийся по MTV, получил награду как лучший видеоклип года.</p>
+                <p class="date__desc">Группа выпустила дебютный альбом Hybrid Theory. Продюсером альбома стал Дон
+                  Гилмор.
+                  Песни из альбома — «Crawling», «One Step Closer» и «In the End» — имели успех в хит-парадах,
+                  а клип «In the End», транслировавшийся по MTV, получил награду как лучший видеоклип года.</p>
             </li>
             <li class="period__date date">
               <h3 class="date__title">2003</h4>
-              <p class="date__desc">В 2003 году вышел второй альбом группы под названием Meteora. Альбом получил ряд
-                наград: премию MTV за лучшее видео («Somewhere I Belong») и Radio Music Awards за лучшую песню («Numb»).
-                Сингл «Numb» стал самой узнаваемой
-                песней Linkin Park.</p>
+                <p class="date__desc">В 2003 году вышел второй альбом группы под названием Meteora. Альбом получил ряд
+                  наград: премию MTV за лучшее видео («Somewhere I Belong») и Radio Music Awards за лучшую песню
+                  («Numb»).
+                  Сингл «Numb» стал самой узнаваемой
+                  песней Linkin Park.</p>
             </li>
             <li class="period__date date">
               <h3 class="date__title">2007</h4>
-              <p class="date__desc">15 мая 2007 года вышел альбом Minutes to Midnight. Песня «What I’ve Done» стала
-                заглавным треком фильма «Трансформеры», а песня «Leave Out All The Rest» прозвучала в титрах фильма
-                «Сумерки».</p>
+                <p class="date__desc">15 мая 2007 года вышел альбом Minutes to Midnight. Песня «What I’ve Done» стала
+                  заглавным треком фильма «Трансформеры», а песня «Leave Out All The Rest» прозвучала в титрах фильма
+                  «Сумерки».</p>
             </li>
             <li class="period__date date">
               <h3 class="date__title">2017</h4>
-              <p class="date__desc">Седьмой альбом группы, One More Light, вышел 19 мая 2017 года. Он содержал в себе 10
-                треков, из которых одноимённый и основной «One More Light» является акустическим.</p>
+                <p class="date__desc">Седьмой альбом группы, One More Light, вышел 19 мая 2017 года. Он содержал в себе
+                  10
+                  треков, из которых одноимённый и основной «One More Light» является акустическим.</p>
             </li>
             <div class="period__nav-btns">
               <button class="period__nav-btn periods__nav-btn--prev">
@@ -143,25 +172,26 @@
             </div>
           </ul>
         </li>
-        <li class="periods__item period" data-period="1989-1993">
+        <li class="periods__item period" data-period="1989-1993" data-id="4">
           <h2 class="period__title">Nirvana</h2>
           <ul class="period__list">
             <li class="period__date date">
               <h3 class="date__title">1989</h4>
-              <p class="date__desc">В июне 1989 года группа выпустила свой первый альбом Bleach на лейбле Sub Pop.
-                В звучании Bleach чувствовалось сильное влияние групп The Melvins,
-                Mudhoney и таких известных рок-коллективов 1970-х годов, как Black Sabbath и Led Zeppelin.</p>
+                <p class="date__desc">В июне 1989 года группа выпустила свой первый альбом Bleach на лейбле Sub Pop.
+                  В звучании Bleach чувствовалось сильное влияние групп The Melvins,
+                  Mudhoney и таких известных рок-коллективов 1970-х годов, как Black Sabbath и Led Zeppelin.</p>
             </li>
             <li class="period__date date">
               <h3 class="date__title">1991</h4>
-              <p class="date__desc">К рождеству 1991 года Nevermind в Америке продавался по 400 тысяч экземпляров в
-                неделю.</p>
+                <p class="date__desc">К рождеству 1991 года Nevermind в Америке продавался по 400 тысяч экземпляров в
+                  неделю.</p>
             </li>
             <li class="period__date date">
               <h3 class="date__title">1993</h4>
-              <p class="date__desc">Utero дебютировал в хит-параде Billboard 200 в сентябре 1993 года, заняв там первое
-                место. Однако, будучи коммерчески успешным, альбом всё же не достиг успеха
-                Nevermind.</p>
+                <p class="date__desc">Utero дебютировал в хит-параде Billboard 200 в сентябре 1993 года, заняв там
+                  первое
+                  место. Однако, будучи коммерчески успешным, альбом всё же не достиг успеха
+                  Nevermind.</p>
             </li>
             <div class="period__nav-btns">
               <button class="period__nav-btn periods__nav-btn--prev"></button>
@@ -169,7 +199,7 @@
             </div>
           </ul>
         </li>
-      </ol>
+      </ul>
       <div class="periods__controls controls">
         <div class="controls__pages-container">
           <p class="controls__pages">
@@ -178,7 +208,8 @@
           <div class="controls__nav-btns">
             <button class="controls__nav-btn controls__nav-btn--prev" aria-label="Предыдущий">
               <svg class="controls__icon" xmlns="http://www.w3.org/2000/svg">
-                <g class="controls__icon--mobile" width="6" height="8" viewBox="0 0 6 8" xmlns="http://www.w3.org/2000/svg">
+                <g class="controls__icon--mobile" width="6" height="8" viewBox="0 0 6 8"
+                  xmlns="http://www.w3.org/2000/svg">
                   <path d="M4.7489 1.04178L1.6239 4.16678L4.7489 7.29178" stroke="currentColor" stroke-width="2" />
                 </g>
                 <g class="controls__icon--desktop" width="10" height="14" viewBox="0 0 10 14">
@@ -191,7 +222,8 @@
                 <g class="controls__icon--desktop" width="6" height="8" viewBox="0 0 10 14">
                   <path d="M8.49988 0.750001L2.24988 7L8.49988 13.25" stroke="currentColor" stroke-width="2" />
                 </g>
-                <g class="controls__icon--mobile" width="10" height="14" viewBox="0 0 6 8" xmlns="http://www.w3.org/2000/svg">
+                <g class="controls__icon--mobile" width="10" height="14" viewBox="0 0 6 8"
+                  xmlns="http://www.w3.org/2000/svg">
                   <path d="M4.7489 1.04178L1.6239 4.16678L4.7489 7.29178" stroke="currentColor" stroke-width="2" />
                 </g>
               </svg>

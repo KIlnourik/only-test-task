@@ -1,0 +1,107 @@
+.revolver {
+  @media (min-width: $desktop-view) {
+    @include absolute-element(530px, 530px);
+    @include display-flex(center, center, center, column);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__current-period {
+    margin: 0;
+    margin-top: 56px;
+    padding-bottom: 58px;
+    font-family: "PTSans-Bold", "Arial", sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 72.46px;
+    letter-spacing: -0.02em;
+    color: $blue;
+    position: relative;
+
+    @media (min-width: $desktop-view) {
+      @include absolute-element(null, null);
+      margin: 0;
+      padding: 0;
+      display: block;
+      font-size: 200px;
+      line-height: 160px;
+      text-align: center;
+    }
+
+    span {
+      color: $fuchsia;
+    }
+
+    &::after {
+      @include absolute-element(100%, 1px);
+      background-color: $darker-grey;
+      left: 0;
+      bottom: 0;
+
+      @media (min-width: $desktop-view) {
+        display: none;
+      }
+    }
+  }
+
+  &__bullets {
+    display: none;
+
+    @media (min-width: $desktop-view) {
+      @include list-reset();
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: transparent;
+      border-radius: 50%;
+      border: 1px solid $border-dark-grey-blue;
+      counter-reset: bullet 0;
+    }
+  }
+
+  &__bullet {
+    @media (min-width: $desktop-view) {
+      position: absolute;
+      display: block;
+      cursor: pointer;
+      counter-increment: bullet 1;
+
+      &::before {
+        @include absolute-element(6px, 6px);
+        @include display-flex(center, center, center, row);
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: $dark-grey-blue;
+        transition: 0.2s;
+      }
+
+      &:hover {
+        &::before {
+          content: counter(bullet);
+          width: 56px;
+          height: 56px;
+          border-radius: 50%;
+          background-color: $grey;
+          border: 1px solid $dark-grey-blue;
+          text-align: center;
+          vertical-align: middle;
+          font-size: 20px;
+          line-height: 30px;
+          transform: translate(-49.5%, -49.5%);
+        }
+      }
+    }
+
+    span {
+      @media (min-width: $desktop-view) {
+        display: none;
+      }
+    }
+  }
+}
