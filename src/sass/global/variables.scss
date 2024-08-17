@@ -5,10 +5,13 @@ $fuchsia: #EF5DA8;
 $numeration-dark-grey: #303E5880;
 $semi-transparent-dark-grey-blue: rgba(66, 86, 122, 0.5);
 $transparent-dark-grey-blue:rgba(66, 86, 122, 0.4);
+$border-dark-grey-blue: rgba(66, 86, 122, 0.1);
 $dark-grey-blue:#42567A;
 $darker-grey: #C7CDD9;
 $grey: #F4F5F9;
 
 // Viewports
 $tablet-view: 768px;
-$desktop-view: 1920px;
+$desktop-view: 1024px;
+$big-desktop-view: 1440px;
+$full-hd-view: 1920px;

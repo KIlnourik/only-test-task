@@ -1,7 +1,12 @@
-.navigation {
+.controls {
   @include display-flex(center, flex-start, left, row);
   min-height: 50px;
   gap: 39px;
+
+  @media (min-width: $desktop-view) {
+    margin-top: 393px;
+    margin-bottom: 56px;
+  }
 
   &__pages {
     margin-top: 0;
@@ -9,6 +14,10 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 18.12px;
+
+    @media (min-width: $desktop-view) {
+      margin-bottom: 20px;
+    }
   }
 
   &__nav-btns {
@@ -26,17 +35,43 @@
     border: 1px solid $semi-transparent-dark-grey-blue;
     background-color: transparent;
 
-    svg {
-      margin: 0;
-      padding: 0;
-      width: 6.25px;
-      height: 12.5px;
-      color: $dark-grey-blue;
-      fill: none;
+    @media (min-width: $desktop-view) {
+      width: 50px;
+      height: 50px;
     }
 
-    &--next svg {
+    &--next {
       transform: rotate(180deg);
+    }
+  }
+
+  &__icon {
+    margin: 0;
+    padding: 0;
+    width: 6px;
+    height: 8px;
+    color: $dark-grey-blue;
+    fill: none;
+
+    @media (min-width: $desktop-view) {
+      width: 10px;
+      height: 14px;
+    }
+
+    &--mobile {
+      display: block;
+
+      @media(min-width: $desktop-view) {
+        display: none;
+      }
+    }
+
+    &--desktop {
+      display: none;
+
+      @media(min-width: $desktop-view) {
+        display: block;
+      }
     }
   }
 
@@ -44,6 +79,11 @@
     @include list-reset();
     @include display-flex(center, center, center, row);
     gap: 10px;
+
+
+    @media (min-width: $desktop-view) {
+      display: none;
+    }
   }
 
   &__pagination-item {
