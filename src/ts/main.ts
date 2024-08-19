@@ -1,3 +1,4 @@
 import '../sass/style.scss';
 
-import './revolver';
+import './pagination';
+import './sliders/date-slider';

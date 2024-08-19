@@ -1,5 +1,5 @@
-const revolver: HTMLDivElement = document.querySelector('.revolver');
-const bullets: NodeListOf<HTMLElement> = revolver.querySelectorAll('.revolver__bullet');
+const pagination: HTMLDivElement = document.querySelector('.controls__pagination-wrapper');
+const bullets: NodeListOf<HTMLElement> = pagination.querySelectorAll('.controls__pagination-item');
 const bulletsLength: number = bullets.length;
 const arc: number = 2 * Math.PI * (1 / bulletsLength);
 const RADIUS: number = 50;
