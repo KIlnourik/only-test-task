@@ -2,44 +2,40 @@ import Swiper from 'swiper';
 import { SwiperOptions } from 'swiper/types';
 import { Navigation } from 'swiper/modules';
 
-const period: HTMLElement = document.querySelector('.period--active');
-const slider: HTMLUListElement = period.querySelector('.swiper');
-const prevBtn: HTMLButtonElement = period.querySelector('.period__nav-btn--prev');
-const nextBtn: HTMLButtonElement = period.querySelector('.period__nav-btn--next');
+function initDateSlider() {
+  const period: HTMLElement = document.querySelector('.period--active');
+  const slider: HTMLElement = period.querySelector('.period__swiper');
 
-const swiperOptions: SwiperOptions = {
-  init: false,
-  direction: 'horizontal',
-  breakpoints: {
-    320: {
-      slidesPerView: 1,
-      width: 166,
-      spaceBetween: 25
+  const swiperOptions: SwiperOptions = {
+    init: false,
+    direction: 'horizontal',
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        width: 166,
+        spaceBetween: 25,
+      },
+      1024: {
+        width: 320,
+        spaceBetween: 80,
+      }
     },
-    1024: {
-      width: 320,
-      spaceBetween: 80
-    }
-  },
-  modules: [Navigation],
-  navigation: {
-    nextEl: '.period__nav-btn--next',
-    prevEl: '.period__nav-btn--prev',
-  },
+    modules: [Navigation],
+    navigation: {
+      nextEl: '.period__nav-btn--next',
+      prevEl: '.period__nav-btn--prev',
+    },
+    nested: true,
+    initialSlide: 0,
+    grabCursor: true,
+    observer: true,
+    observeParents: true
+  }
+
+  const swiper: Swiper = new Swiper(slider, swiperOptions);
+
+  swiper.on('beforeInit', () => swiper.slideTo(0));
+  swiper.init();
 }
 
-function hideControls() {
-  const isBeginning = swiper.isBeginning;
-  const isEnd = swiper.isEnd;
-
-  (isBeginning) ? prevBtn.style.display = 'none' : prevBtn.style.display = 'flex';
-  (isEnd) ? nextBtn.style.display = 'none' : nextBtn.style.display = 'flex';
-}
-
-const swiper: Swiper = new Swiper(slider, swiperOptions);
-
-swiper.on('init', () => prevBtn.style.display = 'none');
-swiper.init();
-
-
-swiper.on('slideChange', hideControls);
+export { initDateSlider };

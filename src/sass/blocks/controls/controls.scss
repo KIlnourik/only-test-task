@@ -1,14 +1,16 @@
 .controls {
   @include display-flex(center, flex-start, left, row);
+
   min-height: 50px;
   gap: 39px;
 
   @media (min-width: $desktop-view) {
-    margin-top: 393px;
+    margin-top: 378px;
     margin-bottom: 56px;
   }
 
   &__pages {
+    @include display-flex(start, start, center, row);
     margin-top: 0;
     margin-bottom: 7px;
     font-size: 14px;
@@ -16,13 +18,17 @@
     line-height: 18.12px;
 
     @media (min-width: $desktop-view) {
-      margin-bottom: 20px;
+      margin-bottom: 6px;
     }
   }
 
   &__nav-btns {
     @include display-flex(center, center, center, row);
     gap: 8px;
+
+    @media (min-width: $desktop-view) {
+      gap: 20px;
+    }
   }
 
   &__nav-btn {
@@ -66,7 +72,7 @@
     &--mobile {
       display: block;
 
-      @media(min-width: $desktop-view) {
+      @media (min-width: $desktop-view) {
         display: none;
       }
     }
@@ -74,14 +80,13 @@
     &--desktop {
       display: none;
 
-      @media(min-width: $desktop-view) {
+      @media (min-width: $desktop-view) {
         display: block;
       }
     }
   }
 
   &__pagination-wrapper {
-
     @media (min-width: $desktop-view) {
       @include absolute-element(530px, 530px);
       @include display-flex(center, center, center, column);
@@ -93,13 +98,10 @@
   }
 
   &__pagination {
-    @include list-reset();
     @include display-flex(center, center, center, row);
     gap: 10px;
 
-
     @media (min-width: $desktop-view) {
-      @include list-reset();
       position: relative;
       display: block;
       width: 100%;
@@ -110,7 +112,6 @@
       border-radius: 50%;
       border: 1px solid $border-dark-grey-blue;
       counter-reset: bullet 0;
-
     }
   }
 
@@ -119,63 +120,55 @@
     height: 6px;
     border-radius: 50%;
     background-color: $transparent-dark-grey-blue;
+    font-size: 0;
+    cursor: pointer;
 
-    &:hover {
-      background-color: $dark-grey-blue;
-    }
-
+    &:hover,
     &--active {
       background-color: $dark-grey-blue;
     }
 
     @media (min-width: $desktop-view) {
-      position: absolute;
-      display: block;
-      cursor: pointer;
-      counter-increment: bullet 1;
+      @include absolute-element(6px, 6px);
+      @include display-flex(center, center, center, row);
+      width: 6px;
+      height: 6px;
+      font-size: 0;
+      line-height: 0;
+      border-radius: 50%;
+      background-color: $dark-grey-blue;
+      transition: 0.2s;
 
-      &::before {
-        @include absolute-element(6px, 6px);
-        @include display-flex(center, center, center, row);
-        content: counter(bullet);
-        width: 6px;
-        height: 6px;
-        font-size: 0;
-        line-height: 0;
-        border-radius: 50%;
-        background-color: $dark-grey-blue;
-        transition: 0.2s;
-      }
-
-      &:hover {
-        &::before {
-          width: 56px;
-          height: 56px;
-          border-radius: 50%;
-          background-color: $grey;
-          border: 1px solid $dark-grey-blue;
-          text-align: center;
-          vertical-align: middle;
-          font-size: 20px;
-          line-height: 30px;
-          transform: translate(-49.5%, -49.5%);
-        }
-      }
-
+      &:hover,
       &--active {
-        &::before {
-          width: 56px;
-          height: 56px;
-          border-radius: 50%;
-          background-color: $grey;
-          border: 1px solid $dark-grey-blue;
-          text-align: center;
-          vertical-align: middle;
-          font-size: 20px;
-          line-height: 30px;
-          transform: translate(-49.5%, -49.5%);
-        }
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background-color: $grey;
+        border: 1px solid $dark-grey-blue;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 20px;
+        line-height: 30px;
+        transform: translate(-49.5%, -49.5%);
       }
     }
+
+    // &--active {
+    //   background-color: $dark-grey-blue;
+
+    //   @media (min-width: $desktop-view) {
+    //     width: 56px;
+    //     height: 56px;
+    //     border-radius: 50%;
+    //     background-color: $grey;
+    //     border: 1px solid $dark-grey-blue;
+    //     text-align: center;
+    //     vertical-align: middle;
+    //     font-size: 20px;
+    //     line-height: 30px;
+    //     transform: translate(-49.5%, -49.5%);
+    //   }
+    // }
   }
 }
