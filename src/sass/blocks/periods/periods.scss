@@ -78,6 +78,7 @@
   &__list {
     @include list-reset();
     @include display-flex(flex-start, space-between, left, row);
+    min-width: 0;
     height: auto;
 
     @media (min-width: $desktop-view) {

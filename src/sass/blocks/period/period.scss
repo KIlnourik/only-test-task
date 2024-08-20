@@ -60,6 +60,8 @@
     display: none;
   }
 
+
+
   &__swiper {
     display: block;
     min-width: 0;
@@ -68,12 +70,12 @@
       margin-bottom: 104px;
       width: 100%;
       min-width: 0;
-      max-width: calc(1024px - 160px);
+      min-width: calc(1024px - 160px);
       overflow: hidden;
     }
 
     @media (min-width: $big-desktop-view) {
-      max-width: calc(1440px - 160px);
+      min-width: calc(1440px - 160px);
     }
   }
 
@@ -148,9 +150,20 @@
         left: calc(1200px + ($big-desktop-view - 1200px - 140px));
       }
     }
-
   }
 }
+
+.period--active .period__title {
+  @media (min-width: $desktop-view) {
+    @include display-flex(start, start, left, row);
+    position: absolute;
+    left: 820px;
+    top: -625px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
 
 .period.swiper-slide-active {
   opacity: 1;
