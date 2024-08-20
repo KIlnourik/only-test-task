@@ -1,1 +1,16 @@
-@import url('./global/global.scss');
+/* stylelint-disable */
+// Нормализация стилей
+@import "./vendor/normalize.scss";
+
+// Глобальный стили
+@import "./global/fonts.scss";
+@import "./global/variables.scss";
+@import "./global/mixins.scss";
+@import "./global/global.scss";
+
+// Main
+@import "./blocks/main/main.scss";
+@import "./blocks/periods/periods.scss";
+@import "./blocks/controls/controls.scss";
+@import "./blocks/period/period.scss";
+@import "./blocks/date/date.scss";

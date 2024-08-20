@@ -1,0 +1,36 @@
+.date {
+
+  @media(min-width: $desktop-view) {
+    opacity: 1;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 15px;
+    font-family: "BebasNeue", "Arial", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+    color: $blue;
+
+    @media (min-width: $desktop-view) {
+      font-size: 25px;
+      line-height: 30px;
+    }
+  }
+
+  &__desc {
+    margin: 0;
+    font-family: "PTSans-Regular", "Arial", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20.3px;
+    text-align: left;
+    color: $dark-grey-blue;
+
+    @media (min-width: $desktop-view) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+}

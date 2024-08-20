@@ -1,0 +1,156 @@
+.controls {
+  @include display-flex(center, flex-start, left, row);
+
+  min-height: 50px;
+  gap: 39px;
+
+  @media (min-width: $desktop-view) {
+    margin-top: 378px;
+    margin-bottom: 56px;
+  }
+
+  &__pages {
+    @include display-flex(start, start, center, row);
+    margin-top: 0;
+    margin-bottom: 7px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18.12px;
+
+    @media (min-width: $desktop-view) {
+      margin-bottom: 6px;
+    }
+  }
+
+  &__nav-btns {
+    @include display-flex(center, center, center, row);
+    gap: 8px;
+
+    @media (min-width: $desktop-view) {
+      gap: 20px;
+    }
+  }
+
+  &__nav-btn {
+    @include display-flex(center, center, center, row);
+    margin: 0;
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid $semi-transparent-dark-grey-blue;
+    background-color: transparent;
+    cursor: pointer;
+
+    @media (min-width: $desktop-view) {
+      width: 50px;
+      height: 50px;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+    }
+
+    &--next {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__icon {
+    margin: 0;
+    padding: 0;
+    width: 6px;
+    height: 8px;
+    color: $dark-grey-blue;
+    fill: none;
+
+    @media (min-width: $desktop-view) {
+      width: 10px;
+      height: 14px;
+    }
+
+    &--mobile {
+      display: block;
+
+      @media (min-width: $desktop-view) {
+        display: none;
+      }
+    }
+
+    &--desktop {
+      display: none;
+
+      @media (min-width: $desktop-view) {
+        display: block;
+      }
+    }
+  }
+
+  &__pagination-wrapper {
+    @media (min-width: $desktop-view) {
+      @include absolute-element(530px, 530px);
+      @include display-flex(center, center, center, column);
+      top: 215px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 100;
+    }
+  }
+
+  &__pagination {
+    @include display-flex(center, center, center, row);
+    gap: 10px;
+
+    @media (min-width: $desktop-view) {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: transparent;
+      border-radius: 50%;
+      border: 1px solid $border-dark-grey-blue;
+      counter-reset: bullet 0;
+    }
+  }
+
+  &__pagination-item {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: $transparent-dark-grey-blue;
+    font-size: 0;
+    cursor: pointer;
+
+    &:hover,
+    &--active {
+      background-color: $dark-grey-blue;
+    }
+
+    @media (min-width: $desktop-view) {
+      @include absolute-element(6px, 6px);
+      @include display-flex(center, center, center, row);
+      width: 6px;
+      height: 6px;
+      font-size: 0;
+      line-height: 0;
+      border-radius: 50%;
+      background-color: $dark-grey-blue;
+      transition: 0.2s;
+
+      &:hover,
+      &--active {
+        width: 56px;
+        height: 56px;
+        background-color: $grey;
+        border: 1px solid $dark-grey-blue;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 20px;
+        line-height: 30px;
+        transform: translate(-49.5%, -49.5%);
+      }
+    }
+  }
+}

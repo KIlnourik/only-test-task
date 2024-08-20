@@ -1,0 +1,104 @@
+.periods {
+  @include display-flex(flex-start, flex-start, left, column);
+  margin: 0;
+  padding-left: 20px;
+  padding-top: 59px;
+  min-height: 568px;
+  overflow-x: hidden;
+
+  @media(min-width: $desktop-view) {
+    padding: 0 80px;
+    min-height: 1080px;
+    max-width: 1440px;
+    justify-content: space-between;
+    border: 1px solid $border-dark-grey-blue;
+    position: relative;
+
+    &::before {
+      @include absolute-element(100%, 1px);
+      background-color: $border-dark-grey-blue;
+      top: calc(215px + ( 530px / 2));
+      left: 0;
+    }
+
+    &::after {
+      @include absolute-element(1px, 100%);
+      background-color: $border-dark-grey-blue;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @media (min-width: $big-desktop-view) {
+      margin: 0 auto;
+    }
+
+    @media (min-width: $full-hd-view) {
+      margin-left: calc(100vw / 6);
+    }
+  }
+
+  &__title {
+    margin: 0;
+    max-width: 123px;
+    font-family: "PTSans-Bold", "Arial", sans-serif;
+    color: $dark-grey-blue;
+    font-size: 20px;
+    line-height: 24px;
+
+    @media(min-width: $desktop-view) {
+      margin-top: 170px;
+      font-size: 56px;
+      line-height: 120%;
+      max-width: 353px;
+      position: relative;
+      order: 0;
+
+      &::before {
+        @include absolute-element(5px, 120px);
+        top: 0;
+        left: -80px;
+        background: linear-gradient($blue, $fuchsia);
+      }
+    }
+  }
+
+  &__slider {
+    max-width:100vw;
+
+    @media(min-width: $desktop-view) {
+      order: 2;
+    }
+
+    @media (min-width: $big-desktop-view) {
+      max-width: 1440px;
+    }
+  }
+
+  &__list {
+    @include list-reset();
+    @include display-flex(flex-start, space-between, left, row);
+    min-width: 0;
+    height: auto;
+
+    @media (min-width: $desktop-view) {
+      justify-content: start;
+      align-self: center;
+    }
+
+    @media (min-width: $big-desktop-view) {
+      align-self: self-start;
+    }
+  }
+
+  &__controls {
+    margin-top: 78px;
+    margin-bottom: 13px;
+
+    @media (min-width: $desktop-view) {
+      order: 1;
+    }
+  }
+
+}
+
