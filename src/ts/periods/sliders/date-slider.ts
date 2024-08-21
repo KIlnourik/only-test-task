@@ -29,7 +29,8 @@ function initDateSlider() {
     initialSlide: 0,
     grabCursor: true,
     observer: true,
-    observeParents: true
+    observeParents: true,
+    centeredSlides: true,
   }
 
   const swiper: Swiper = new Swiper(slider, swiperOptions);

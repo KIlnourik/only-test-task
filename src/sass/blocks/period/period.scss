@@ -1,6 +1,7 @@
 .period {
   opacity: 0;
   visibility: hidden;
+  min-height: 0;
 
   &__current {
     margin: 0;
@@ -17,16 +18,12 @@
     position: relative;
 
     @media (min-width: $desktop-view) {
-      display: flex;
+      @include display-flex(center, center, left, row);
       position: absolute;
-      margin: 0;
-      padding: 0;
-      max-width: calc(1024px - 160px);
-      justify-content: center;
-      align-items: center;
+      margin: auto;
+      max-width: calc(100vw - 160px);
       font-size: 160px;
       line-height: 160px;
-      text-align: left;
       top: -441px;
       z-index: 20;
     }
@@ -36,15 +33,33 @@
       max-width: calc(1440px - 160px);
     }
 
-    @media (min-width: $full-hd-view) {
+  }
+  &__to {
+    color: $fuchsia;
+  }
+
+  &__title {
+    // @include display-flex(flex-start, flex-start, left, row);
+    position: relative;
+    margin: 0;
+    padding-bottom: 20px;
+
+    @media (min-width: $desktop-view) {
+      position: absolute;
+      min-width: 0;
+      left: 612px;
+      top: -625px;
+      font-size: 20px;
+      line-height: 30px;
     }
 
-    span {
-      color: $fuchsia;
+    @media (min-width: $big-desktop-view) {
+      left: 820px;
     }
+
 
     &::after {
-      @include absolute-element(100%, 1px);
+      @include absolute-element(calc(100% - 20px), 1px);
       background-color: $darker-grey;
       left: 0;
       bottom: 0;
@@ -55,13 +70,6 @@
     }
   }
 
-
-  &__title {
-    display: none;
-  }
-
-
-
   &__swiper {
     display: block;
     min-width: 0;
@@ -69,7 +77,6 @@
     @media (min-width: $desktop-view) {
       margin-bottom: 104px;
       width: 100%;
-      min-width: 0;
       min-width: calc(1024px - 160px);
       overflow: hidden;
     }
@@ -82,34 +89,30 @@
   &__list {
     @include list-reset();
     @include display-flex(flex-start, space-between, left, row);
+    margin: 0 auto;
     min-width: 0;
+    z-index: 100;
   }
 
-  &__date {
-    margin-top: 20px;
-    min-width: 166px;
-    min-height: 114px;
-    opacity: 0.4;
-
-    @media (min-width: $desktop-view) {
-      margin-top: 0;
-      min-width: 320px;
-      min-height: 135px;
-      opacity: 0;
-    }
-  }
-
-  &__nav-btns {
+  &__nav-btns-wrapper {
     display: none;
 
     @media (min-width: $desktop-view) {
       @include absolute-element(100%, 0);
       display: block;
+      min-height: 100%;
       min-width: calc(1024px - 160px);
       max-width: calc(1440px - 160px);
       top: 0;
       left: 0;
-      z-index: 5;
+      z-index: 0;
+    }
+  }
+
+  &__nav-btns {
+    @media (min-width: $desktop-view) {
+      position: relative;
+      height: 100%;
     }
   }
 
@@ -120,7 +123,7 @@
       @include absolute-element(40px, 40px);
       @include display-flex(center, center, center, row);
       box-shadow: 0px 0px 15px 0px rgba(56, 119, 238, 0.1);
-      top: calc(135px / 2);
+      top: calc((100% - 104px) / 2);
       left: -60px;
       border-radius: 50%;
       border: none;
@@ -139,13 +142,12 @@
       }
 
       &--next {
-        left: calc(800px + ($desktop-view - 800px - 160px));
+        left: calc(100vw - 140px);
         transform: rotate(180deg);
       }
     }
 
     @media (min-width: $big-desktop-view) {
-
       &--next {
         left: calc(1200px + ($big-desktop-view - 1200px - 140px));
       }
@@ -153,35 +155,10 @@
   }
 }
 
-.period--active .period__title {
-  @media (min-width: $desktop-view) {
-    @include display-flex(start, start, left, row);
-    position: absolute;
-    left: 820px;
-    top: -625px;
-    font-size: 20px;
-    line-height: 30px;
-  }
-}
-
-
 .period.swiper-slide-active {
+  position: relative;
+  margin: 0;
   opacity: 1;
   visibility: visible;
-  position: relative;
   z-index: 10;
-  width: 100%;
-}
-
-
-.period__date.swiper-slide-active {
-  opacity: 1;
-}
-
-.period__date.swiper-slide-active,
-.period__date.swiper-slide-prev,
-.period__date.swiper-slide-next {
-  @media (min-width: $desktop-view) {
-    opacity: 1;
-  }
 }

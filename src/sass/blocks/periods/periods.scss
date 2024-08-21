@@ -1,12 +1,12 @@
 .periods {
-  @include display-flex(flex-start, flex-start, left, column);
+  @include display-flex(flex-start, space-between, left, column);
   margin: 0;
   padding-left: 20px;
   padding-top: 59px;
   min-height: 568px;
   overflow-x: hidden;
 
-  @media(min-width: $desktop-view) {
+  @media (min-width: $desktop-view) {
     padding: 0 80px;
     min-height: 1080px;
     max-width: 1440px;
@@ -17,7 +17,7 @@
     &::before {
       @include absolute-element(100%, 1px);
       background-color: $border-dark-grey-blue;
-      top: calc(215px + ( 530px / 2));
+      top: calc(215px + (530px / 2));
       left: 0;
     }
 
@@ -46,7 +46,7 @@
     font-size: 20px;
     line-height: 24px;
 
-    @media(min-width: $desktop-view) {
+    @media (min-width: $desktop-view) {
       margin-top: 170px;
       font-size: 56px;
       line-height: 120%;
@@ -64,14 +64,12 @@
   }
 
   &__slider {
-    max-width:100vw;
+    width: 100%;
+    max-width: 1440px;
 
-    @media(min-width: $desktop-view) {
+    @media (min-width: $desktop-view) {
+      @include display-flex(center, center, left, row);
       order: 2;
-    }
-
-    @media (min-width: $big-desktop-view) {
-      max-width: 1440px;
     }
   }
 
@@ -79,10 +77,10 @@
     @include list-reset();
     @include display-flex(flex-start, space-between, left, row);
     min-width: 0;
-    height: auto;
+    height: 100%;
 
     @media (min-width: $desktop-view) {
-      justify-content: start;
+      margin: 0 auto;
       align-self: center;
     }
 
@@ -92,13 +90,13 @@
   }
 
   &__controls {
-    margin-top: 78px;
+    margin-top: 20px;
     margin-bottom: 13px;
 
     @media (min-width: $desktop-view) {
+      margin-top: 378px;
+      margin-bottom: 56px;
       order: 1;
     }
   }
-
 }
-

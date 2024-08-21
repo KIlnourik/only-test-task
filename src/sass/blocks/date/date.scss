@@ -1,8 +1,16 @@
 .date {
+  opacity: 0.4;
+  margin-top: 20px;
+  min-width: 166px;
+  min-height: 114px;
 
-  @media(min-width: $desktop-view) {
+  @media (min-width: $desktop-view) {
+    margin-top: 0;
+    min-width: 320px;
+    min-height: 135px;
     opacity: 1;
   }
+
 
   &__title {
     margin: 0;
@@ -32,5 +40,22 @@
       font-size: 20px;
       line-height: 30px;
     }
+  }
+}
+
+.date.swiper-slide-active {
+  opacity: 1;
+}
+
+.date.swiper-slide-active,
+.date.swiper-slide-next {
+  @media (min-width: 375px) {
+    opacity: 1;
+  }
+}
+
+.date.swiper-slide-next ~ .date {
+  @media (min-width: 425px) {
+    opacity: 1;
   }
 }

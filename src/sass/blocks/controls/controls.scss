@@ -1,24 +1,31 @@
 .controls {
   @include display-flex(center, flex-start, left, row);
-
   min-height: 50px;
   gap: 39px;
 
-  @media (min-width: $desktop-view) {
-    margin-top: 378px;
-    margin-bottom: 56px;
+  @media (min-width: 375px) {
+    width: calc(100vw - 40px);
+    justify-content: space-between;
+    gap: 0;
   }
 
   &__pages {
     @include display-flex(start, start, center, row);
     margin-top: 0;
-    margin-bottom: 7px;
     font-size: 14px;
     font-weight: 400;
     line-height: 18.12px;
 
     @media (min-width: $desktop-view) {
-      margin-bottom: 6px;
+      margin-bottom: 0;
+    }
+
+    p {
+      margin-bottom: 7px;
+
+      @media (min-width: $desktop-view) {
+        margin-bottom: 20px;
+      }
     }
   }
 
@@ -41,10 +48,15 @@
     border: 1px solid $semi-transparent-dark-grey-blue;
     background-color: transparent;
     cursor: pointer;
+    transition: 0.2s;
 
     @media (min-width: $desktop-view) {
       width: 50px;
       height: 50px;
+    }
+
+    &:hover {
+      background-color: $white;
     }
 
     &:disabled {
@@ -87,6 +99,10 @@
   }
 
   &__pagination-wrapper {
+    @media (min-width: 375px) {
+      margin: 0 auto;
+    }
+
     @media (min-width: $desktop-view) {
       @include absolute-element(530px, 530px);
       @include display-flex(center, center, center, column);
@@ -149,7 +165,7 @@
         vertical-align: middle;
         font-size: 20px;
         line-height: 30px;
-        transform: translate(-49.5%, -49.5%);
+        transform: translate(-50%, -50%);
       }
     }
   }
