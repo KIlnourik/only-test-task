@@ -1,3 +1,3 @@
 import '../sass/style.scss';
 
-import './periods/index';
+import './periods/sliders/index';

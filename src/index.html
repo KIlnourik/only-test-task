@@ -13,24 +13,15 @@
 </head>
 
 <body>
-  <div style="display: none">
-    <svg xmlns="http://www.w3.org/2000/svg">
-      <symbol id="arrow" viewBox="0 0 10 14">
-        <path d="M8.49988 0.750001L2.24988 7L8.49988 13.25" stroke="currentColor" stroke-width="2" />
-      </symbol>
-      <symbol id="mobile-arrow" viewBox="0 0 6 8" xmlns="http://www.w3.org/2000/svg">
-        <path d="M4.7489 1.04178L1.6239 4.16678L4.7489 7.29178" stroke="currentColor" stroke-width="2" />
-      </symbol>
-    </svg>
-  </div>
-
   <main class="main">
     <section class="periods">
       <h1 class="periods__title">Исторические даты</h1>
       <div class="periods__slider swiper">
         <ul class="periods__list swiper-wrapper">
-          <li class="periods__item period period--active swiper-slide">
-            <h2 class="period__current">1991&nbsp;&nbsp;<span>2016</span></h2>
+          <li class="periods__item period swiper-slide">
+            <h2 class="period__current">
+              <span class="period__from">1991</span>&nbsp;&nbsp;<span class="period__to">2016</span>
+            </h2>
             <h3 class="period__title">Red Hot Chili Peppers</h3>
             <div class="period__swiper swiper">
               <ul class="period__list swiper-wrapper">
@@ -62,25 +53,27 @@
                 </li>
               </ul>
             </div>
-            <div class="period__nav-btns">
-              <button class="period__nav-btn period__nav-btn--prev">
-                <svg class="controls__icon" xmlns="http://www.w3.org/2000/svg">
-                  <g class="controls__icon--desktop" width="10" height="14" viewBox="0 0 10 14">
+            <div class="period__nav-btns-wrapper">
+              <div class="period__nav-btns">
+                <button class="period__nav-btn period__nav-btn--prev">
+                  <svg class="controls__icon controls__icon--desktop" viewBox="0 0 10 14"
+                    xmlns="http://www.w3.org/2000/svg">
                     <path d="M8.49988 0.750001L2.24988 7L8.49988 13.25" stroke="currentColor" stroke-width="2" />
-                  </g>
-                </svg>
-              </button>
-              <button class="period__nav-btn period__nav-btn--next">
-                <svg class="controls__icon" xmlns="http://www.w3.org/2000/svg">
-                  <g class="controls__icon--desktop" width="10" height="14" viewBox="0 0 10 14">
+                  </svg>
+                </button>
+                <button class="period__nav-btn period__nav-btn--next">
+                  <svg class="controls__icon controls__icon--desktop" viewBox="0 0 10 14"
+                    xmlns="http://www.w3.org/2000/svg">
                     <path d="M8.49988 0.750001L2.24988 7L8.49988 13.25" stroke="currentColor" stroke-width="2" />
-                  </g>
-                </svg>
-              </button>
+                  </svg>
+                </button>
+              </div>
             </div>
           </li>
           <li class="periods__item period swiper-slide">
-            <h2 class="period__current">1992&nbsp;&nbsp;<span>2000</span></h2>
+            <h2 class="period__current">
+              <span class="period__from">1992</span>&nbsp;&nbsp;<span class="period__to">2000</span>
+            </h2>
             <h3 class="period__title">Radiohead</h3>
             <div class="period__swiper swiper">
               <ul class="period__list swiper-wrapper">
@@ -115,25 +108,27 @@
                 </li>
               </ul>
             </div>
-            <div class="period__nav-btns">
-              <button class="period__nav-btn period__nav-btn--prev">
-                <svg class="controls__icon" xmlns="http://www.w3.org/2000/svg">
-                  <g class="controls__icon--desktop" width="10" height="14" viewBox="0 0 10 14">
+            <div class="period__nav-btns-wrapper">
+              <div class="period__nav-btns">
+                <button class="period__nav-btn period__nav-btn--prev">
+                  <svg class="controls__icon controls__icon--desktop" viewBox="0 0 10 14"
+                    xmlns="http://www.w3.org/2000/svg">
                     <path d="M8.49988 0.750001L2.24988 7L8.49988 13.25" stroke="currentColor" stroke-width="2" />
-                  </g>
-                </svg>
-              </button>
-              <button class="period__nav-btn period__nav-btn--next">
-                <svg class="controls__icon" xmlns="http://www.w3.org/2000/svg">
-                  <g class="controls__icon--desktop" width="10" height="14" viewBox="0 0 10 14">
+                  </svg>
+                </button>
+                <button class="period__nav-btn period__nav-btn--next">
+                  <svg class="controls__icon controls__icon--desktop" viewBox="0 0 10 14"
+                    xmlns="http://www.w3.org/2000/svg">
                     <path d="M8.49988 0.750001L2.24988 7L8.49988 13.25" stroke="currentColor" stroke-width="2" />
-                  </g>
-                </svg>
-              </button>
+                  </svg>
+                </button>
+              </div>
             </div>
           </li>
           <li class="periods__item period swiper-slide">
-            <h2 class="period__current">1999&nbsp;&nbsp;<span>2017</span></h2>
+            <h2 class="period__current">
+              <span class="period__from">1999</span>&nbsp;&nbsp;<span class="period__to">2017</span>
+            </h2>
             <h3 class="period__title">Linkin Park</h3>
             <div class="period__swiper swiper">
               <ul class="period__list swiper-wrapper">
@@ -163,25 +158,27 @@
                 </li>
               </ul>
             </div>
-            <div class="period__nav-btns">
-              <button class="period__nav-btn period__nav-btn--prev">
-                <svg class="controls__icon" xmlns="http://www.w3.org/2000/svg">
-                  <g class="controls__icon--desktop" width="10" height="14" viewBox="0 0 10 14">
+            <div class="period__nav-btns-wrapper">
+              <div class="period__nav-btns">
+                <button class="period__nav-btn period__nav-btn--prev">
+                  <svg class="controls__icon controls__icon--desktop" viewBox="0 0 10 14"
+                    xmlns="http://www.w3.org/2000/svg">
                     <path d="M8.49988 0.750001L2.24988 7L8.49988 13.25" stroke="currentColor" stroke-width="2" />
-                  </g>
-                </svg>
-              </button>
-              <button class="period__nav-btn period__nav-btn--next">
-                <svg class="controls__icon" xmlns="http://www.w3.org/2000/svg">
-                  <g class="controls__icon--desktop" width="10" height="14" viewBox="0 0 10 14">
+                  </svg>
+                </button>
+                <button class="period__nav-btn period__nav-btn--next">
+                  <svg class="controls__icon controls__icon--desktop" viewBox="0 0 10 14"
+                    xmlns="http://www.w3.org/2000/svg">
                     <path d="M8.49988 0.750001L2.24988 7L8.49988 13.25" stroke="currentColor" stroke-width="2" />
-                  </g>
-                </svg>
-              </button>
+                  </svg>
+                </button>
+              </div>
             </div>
           </li>
           <li class="periods__item period swiper-slide">
-            <h2 class="period__current">1989&nbsp;&nbsp;<span>1993</span></h2>
+            <h2 class="period__current">
+              <span class="period__from">1989</span>&nbsp;&nbsp;<span class="period__to">1993</span>
+            </h2>
             <h3 class="period__title">Nirvana</h3>
             <div class="period__swiper swiper">
               <ul class="period__list swiper-wrapper">
@@ -202,27 +199,29 @@
                     место. Однако, будучи коммерчески успешным, альбом всё же не достиг успеха
                     Nevermind.</p>
                 </li>
-                <div class="period__nav-btns">
-                  <button class="period__nav-btn period__nav-btn--prev">
-                    <svg class="controls__icon" xmlns="http://www.w3.org/2000/svg">
-                      <g class="controls__icon--desktop" width="10" height="14" viewBox="0 0 10 14">
-                        <path d="M8.49988 0.750001L2.24988 7L8.49988 13.25" stroke="currentColor" stroke-width="2" />
-                      </g>
-                    </svg>
-                  </button>
-                  <button class="period__nav-btn period__nav-btn--next">
-                    <svg class="controls__icon" xmlns="http://www.w3.org/2000/svg">
-                      <g class="controls__icon--desktop" width="10" height="14" viewBox="0 0 10 14">
-                        <path d="M8.49988 0.750001L2.24988 7L8.49988 13.25" stroke="currentColor" stroke-width="2" />
-                      </g>
-                    </svg>
-                  </button>
-                </div>
               </ul>
+            </div>
+            <div class="period__nav-btns-wrapper">
+              <div class="period__nav-btns">
+                <button class="period__nav-btn period__nav-btn--prev">
+                  <svg class="controls__icon controls__icon--desktop" viewBox="0 0 10 14"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.49988 0.750001L2.24988 7L8.49988 13.25" stroke="currentColor" stroke-width="2" />
+                  </svg>
+                </button>
+                <button class="period__nav-btn period__nav-btn--next">
+                  <svg class="controls__icon controls__icon--desktop" viewBox="0 0 10 14"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.49988 0.750001L2.24988 7L8.49988 13.25" stroke="currentColor" stroke-width="2" />
+                  </svg>
+                </button>
+              </div>
             </div>
           </li>
           <li class="periods__item period swiper-slide">
-            <h2 class="period__current">1989&nbsp;&nbsp;<span>1993</span></h2>
+            <h2 class="period__current">
+              <span class="period__from">1989</span>&nbsp;&nbsp;<span class="period__to">1993</span>
+            </h2>
             <h3 class="period__title">Nirvana</h3>
             <div class="period__swiper swiper">
               <ul class="period__list swiper-wrapper">
@@ -243,27 +242,29 @@
                     место. Однако, будучи коммерчески успешным, альбом всё же не достиг успеха
                     Nevermind.</p>
                 </li>
-                <div class="period__nav-btns">
-                  <button class="period__nav-btn period__nav-btn--prev">
-                    <svg class="controls__icon" xmlns="http://www.w3.org/2000/svg">
-                      <g class="controls__icon--desktop" width="10" height="14" viewBox="0 0 10 14">
-                        <path d="M8.49988 0.750001L2.24988 7L8.49988 13.25" stroke="currentColor" stroke-width="2" />
-                      </g>
-                    </svg>
-                  </button>
-                  <button class="period__nav-btn period__nav-btn--next">
-                    <svg class="controls__icon" xmlns="http://www.w3.org/2000/svg">
-                      <g class="controls__icon--desktop" width="10" height="14" viewBox="0 0 10 14">
-                        <path d="M8.49988 0.750001L2.24988 7L8.49988 13.25" stroke="currentColor" stroke-width="2" />
-                      </g>
-                    </svg>
-                  </button>
-                </div>
               </ul>
+            </div>
+            <div class="period__nav-btns-wrapper">
+              <div class="period__nav-btns">
+                <button class="period__nav-btn period__nav-btn--prev">
+                  <svg class="controls__icon controls__icon--desktop" viewBox="0 0 10 14"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.49988 0.750001L2.24988 7L8.49988 13.25" stroke="currentColor" stroke-width="2" />
+                  </svg>
+                </button>
+                <button class="period__nav-btn period__nav-btn--next">
+                  <svg class="controls__icon controls__icon--desktop" viewBox="0 0 10 14"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.49988 0.750001L2.24988 7L8.49988 13.25" stroke="currentColor" stroke-width="2" />
+                  </svg>
+                </button>
+              </div>
             </div>
           </li>
           <li class="periods__item period swiper-slide">
-            <h2 class="period__current">1989&nbsp;&nbsp;<span>1993</span></h2>
+            <h2 class="period__current">
+              <span class="period__from">1989</span>&nbsp;&nbsp;<span class="period__to">1993</span>
+            </h2>
             <h3 class="period__title">Nirvana</h3>
             <div class="period__swiper swiper">
               <ul class="period__list swiper-wrapper">
@@ -284,23 +285,23 @@
                     место. Однако, будучи коммерчески успешным, альбом всё же не достиг успеха
                     Nevermind.</p>
                 </li>
-                <div class="period__nav-btns">
-                  <button class="period__nav-btn period__nav-btn--prev">
-                    <svg class="controls__icon" xmlns="http://www.w3.org/2000/svg">
-                      <g class="controls__icon--desktop" width="10" height="14" viewBox="0 0 10 14">
-                        <path d="M8.49988 0.750001L2.24988 7L8.49988 13.25" stroke="currentColor" stroke-width="2" />
-                      </g>
-                    </svg>
-                  </button>
-                  <button class="period__nav-btn period__nav-btn--next">
-                    <svg class="controls__icon" xmlns="http://www.w3.org/2000/svg">
-                      <g class="controls__icon--desktop" width="10" height="14" viewBox="0 0 10 14">
-                        <path d="M8.49988 0.750001L2.24988 7L8.49988 13.25" stroke="currentColor" stroke-width="2" />
-                      </g>
-                    </svg>
-                  </button>
-                </div>
               </ul>
+            </div>
+            <div class="period__nav-btns-wrapper">
+              <div class="period__nav-btns">
+                <button class="period__nav-btn period__nav-btn--prev">
+                  <svg class="controls__icon controls__icon--desktop" viewBox="0 0 10 14"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.49988 0.750001L2.24988 7L8.49988 13.25" stroke="currentColor" stroke-width="2" />
+                  </svg>
+                </button>
+                <button class="period__nav-btn period__nav-btn--next">
+                  <svg class="controls__icon controls__icon--desktop" viewBox="0 0 10 14"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.49988 0.750001L2.24988 7L8.49988 13.25" stroke="currentColor" stroke-width="2" />
+                  </svg>
+                </button>
+              </div>
             </div>
           </li>
         </ul>
@@ -308,31 +309,27 @@
       <div class="periods__controls controls">
         <div class="controls__pages-container">
           <div class="controls__pages">
-            <p class="controls__current"></p>
+            <p class="controls__current">01</p>
             <p class="controls__delimeter">/</p>
-            <p class="controls__total"></p>
+            <p class="controls__total">01</p>
           </div>
           <div class="controls__nav-btns">
             <button class="controls__nav-btn controls__nav-btn--prev" aria-label="Предыдущий">
-              <svg class="controls__icon" xmlns="http://www.w3.org/2000/svg">
-                <g class="controls__icon--mobile" width="6" height="8" viewBox="0 0 6 8"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path d="M4.7489 1.04178L1.6239 4.16678L4.7489 7.29178" stroke="currentColor" stroke-width="2" />
-                </g>
-                <g class="controls__icon--desktop" width="10" height="14" viewBox="0 0 10 14">
-                  <path d="M8.49988 0.750001L2.24988 7L8.49988 13.25" stroke="currentColor" stroke-width="2" />
-                </g>
+              <svg class="controls__icon controls__icon--desktop" viewBox="0 0 10 14"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.49988 0.750001L2.24988 7L8.49988 13.25" stroke="currentColor" stroke-width="2" />
+              </svg>
+              <svg class="controls__icon controls__icon--mobile" viewBox="0 0 6 8" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.7489 1.04178L1.6239 4.16678L4.7489 7.29178" stroke="currentColor" stroke-width="2" />
               </svg>
             </button>
             <button class="controls__nav-btn controls__nav-btn--next" aria-label="Следующий">
-              <svg class="controls__icon" xmlns="http://www.w3.org/2000/svg">
-                <g class="controls__icon--desktop" width="6" height="8" viewBox="0 0 10 14">
-                  <path d="M8.49988 0.750001L2.24988 7L8.49988 13.25" stroke="currentColor" stroke-width="2" />
-                </g>
-                <g class="controls__icon--mobile" width="10" height="14" viewBox="0 0 6 8"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path d="M4.7489 1.04178L1.6239 4.16678L4.7489 7.29178" stroke="currentColor" stroke-width="2" />
-                </g>
+              <svg class="controls__icon controls__icon--desktop" viewBox="0 0 10 14"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.49988 0.750001L2.24988 7L8.49988 13.25" stroke="currentColor" stroke-width="2" />
+              </svg>
+              <svg class="controls__icon controls__icon--mobile" viewBox="0 0 6 8" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.7489 1.04178L1.6239 4.16678L4.7489 7.29178" stroke="currentColor" stroke-width="2" />
               </svg>
             </button>
           </div>
@@ -343,7 +340,7 @@
         </div>
       </div>
     </section>
-    
+
   </main>
 
   <script src="./bundle.js"></script>
