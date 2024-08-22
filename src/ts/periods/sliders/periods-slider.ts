@@ -4,7 +4,8 @@ import { Navigation, Pagination, EffectCreative } from 'swiper/modules';
 import { initDateSlider } from './date-slider';
 import { setCirclePosition } from '../pagination';
 import { initAnimations } from '../aninmations';
-import { initCurrentPeriodAnimation } from '../aninmations/current-period-animation';
+import { initCurrentPeriodAnimation, currentPeriodAnimate } from '../aninmations/current-period-animation';
+import { animateBullets } from '../aninmations/pagination-animation';
 
 function initPeriodsSlider(): void {
   const periodsSlider: HTMLDivElement = document.querySelector('.periods__slider');
@@ -27,7 +28,7 @@ function initPeriodsSlider(): void {
       bulletClass: 'controls__pagination-item',
       bulletActiveClass: 'controls__pagination-item--active',
       renderBullet: function (index, className) {
-        return `<span class=${className}>${index + 1}</span>`;
+        return `<span class=${className}><span>${index + 1}</span></span>`;
       }
     },
     direction: 'horizontal',
@@ -86,6 +87,7 @@ function initPeriodsSlider(): void {
   periodsSwiper.on('slideChange', () => {
     setActivePeriod();
     initAnimations();
+    animateBullets(periodsSwiper.slides.length, periodsSwiper.activeIndex);
     showSlidePages();
   });
 

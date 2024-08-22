@@ -16,13 +16,21 @@ function initCurrentPeriodAnimation() {
   let oldFrom: string = document.querySelector('.swiper-slide-active .period__from').textContent;
   let oldTo: string = document.querySelector('.swiper-slide-active .period__to').textContent;
 
-  const prevBtn = document.querySelector('.controls__nav-btn--prev');
-  const nextBtn = document.querySelector('.controls__nav-btn--next');
+  const prevBtn: HTMLButtonElement = document.querySelector('.controls__nav-btn--prev');
+  const nextBtn: HTMLButtonElement = document.querySelector('.controls__nav-btn--next');
+  const bulletBlock: HTMLElement = document.querySelector('.controls__pagination');
 
   function animate() {
     currentPeriodAnimate(oldFrom, '.swiper-slide-active .period__from');
     currentPeriodAnimate(oldTo, '.swiper-slide-active .period__to');
   };
+
+  bulletBlock.addEventListener('click', (evt) => {
+    const target = evt.target as HTMLElement;
+    if (target.closest('span')) {
+      animate();
+    }
+  });
 
   nextBtn.addEventListener('click', animate);
   prevBtn.addEventListener('click', animate);
