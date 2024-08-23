@@ -27,8 +27,10 @@ function setCirclePosition(): void {
 
   const { left, top } = getActiveBulletCoords();
 
-  activeBullet.style.left = left;
-  activeBullet.style.top = top;
+  if (activeBullet !== null) {
+    activeBullet.style.left = left;
+    activeBullet.style.top = top;
+  }
 
   for (let i = 0; i < bulletsLength; i++) {
     const angle = i * arc;
