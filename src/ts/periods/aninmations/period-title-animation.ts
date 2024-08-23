@@ -1,8 +1,9 @@
 import { gsap } from 'gsap';
 
-function periodTitleAnimate() {
+function periodTitleAnimate(block: HTMLDivElement): void {
+  const slideTitle = block.querySelector('.swiper-slide .period__title');
   if (document.documentElement.clientWidth >= 320 && document.documentElement.clientWidth < 1024) {
-    gsap.fromTo('.swiper-slide .period__title',
+    gsap.fromTo(slideTitle,
       {
         x: 0,
         y: 30,
@@ -14,7 +15,7 @@ function periodTitleAnimate() {
         opacity: 1,
         duration: 1,
         delay: 0.01,
-        ease: "power2.out",
+        ease: 'power2.out',
       }
     );
   } else {
@@ -28,10 +29,10 @@ function periodTitleAnimate() {
         opacity: 1,
         duration: 2,
         delay: 0.01,
-        ease: "power2.out",
+        ease: 'power2.out',
       }
     );
   }
-};
+}
 
 export { periodTitleAnimate };
