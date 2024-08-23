@@ -7,8 +7,12 @@ import { initAnimations } from '../aninmations';
 import { initCurrentPeriodAnimation } from '../aninmations/current-period-animation';
 import { animateBullets } from '../aninmations/pagination-animation';
 
-function initPeriodsSlider(): void {
-  const periodsSlider: HTMLDivElement = document.querySelector('.periods__slider');
+function initPeriodsSlider(block: HTMLDivElement): void {
+  const periodsSlider: HTMLDivElement = block.querySelector('.periods__slider');
+  const nextSliderBtn: HTMLElement = block.querySelector('.controls__nav-btn--next');
+  const prevSliderBtn: HTMLElement = block.querySelector('.controls__nav-btn--prev');
+  const sliderPagination: HTMLElement = block.querySelector('.controls__pagination');
+
 
   const periodsSwiperOptions: SwiperOptions = {
     init: false,
@@ -18,11 +22,11 @@ function initPeriodsSlider(): void {
       EffectCreative
     ],
     navigation: {
-      nextEl: '.controls__nav-btn--next',
-      prevEl: '.controls__nav-btn--prev',
+      nextEl: nextSliderBtn,
+      prevEl: prevSliderBtn,
     },
     pagination: {
-      el: '.controls__pagination',
+      el: sliderPagination,
       type: 'bullets',
       clickable: true,
       bulletClass: 'controls__pagination-item',
@@ -50,14 +54,14 @@ function initPeriodsSlider(): void {
   const periodsSwiper: Swiper = new Swiper(periodsSlider, periodsSwiperOptions);
 
   function setActivePeriod(): void {
-    const periods: NodeListOf<HTMLElement> = document.querySelectorAll('.period');
+    const periods: NodeListOf<HTMLElement> = block.querySelectorAll('.period');
 
     for (let i = 0; i < periods.length; i++) {
       if (periodsSwiper.activeIndex === i) {
         periods[i].classList.add('period--active');
         periods[i].style.height = '100%';
         periods[i].style.zIndex = '100';
-        initDateSlider();
+        initDateSlider(block);
       } else {
         periods[i].classList.remove('period--active');
         periods[i].style.height = '0';
@@ -66,8 +70,8 @@ function initPeriodsSlider(): void {
   }
 
   function showSlidePages(): void {
-    const currentSlide: HTMLElement = document.querySelector('.controls__current');
-    const totalSlides: HTMLElement = document.querySelector('.controls__total');
+    const currentSlide: HTMLElement = block.querySelector('.controls__current');
+    const totalSlides: HTMLElement = block.querySelector('.controls__total');
     totalSlides.textContent = `0${periodsSwiper.slides.length}`;
 
     const currentSlideIndex = ++periodsSwiper.realIndex;
@@ -76,16 +80,16 @@ function initPeriodsSlider(): void {
 
   periodsSwiper.on('init', () => {
     setActivePeriod();
-    initAnimations();
-    initCurrentPeriodAnimation();
+    initAnimations(block);
+    initCurrentPeriodAnimation(block);
     showSlidePages();
-    setCirclePosition();
+    setCirclePosition(block);
   });
 
   periodsSwiper.on('slideChange', () => {
     setActivePeriod();
-    initAnimations();
-    animateBullets(periodsSwiper.slides.length, periodsSwiper.activeIndex);
+    initAnimations(block);
+    animateBullets(block, periodsSwiper.slides.length, periodsSwiper.activeIndex);
     showSlidePages();
   });
 

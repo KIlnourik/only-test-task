@@ -1,8 +1,9 @@
 import { gsap } from 'gsap';
 
-function periodBlockAnimate(): void {
+function periodBlockAnimate(block: HTMLDivElement): void {
+  const slider = block.querySelector('.swiper-slide .period__swiper');
   if (document.documentElement.clientWidth >= 320 && document.documentElement.clientWidth < 1024) {
-    gsap.fromTo('.swiper-slide .period__swiper',
+    gsap.fromTo(slider,
       {
         x: 0,
         y: 30,

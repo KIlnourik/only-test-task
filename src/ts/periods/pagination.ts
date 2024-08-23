@@ -16,11 +16,11 @@ function getActiveBulletCoords(): activeBulletCoords {
   };
 }
 
-function setCirclePosition(): void {
-  const pagination: HTMLDivElement = document.querySelector('.controls__pagination');
+function setCirclePosition(block: HTMLDivElement): void {
+  const pagination: HTMLDivElement = block.querySelector('.controls__pagination');
   const bullets: NodeListOf<HTMLElement> = pagination.querySelectorAll('.controls__pagination-item');
   const bulletsLength: number = bullets.length;
-  const activeBullet: HTMLElement = document.querySelector('.controls__pagination-item--active');
+  const activeBullet: HTMLElement = block.querySelector('.controls__pagination-item--active');
   const arc: number = 2 * Math.PI * (1 / bulletsLength);
   const RADIUS: number = 50;
   const ACTIVE_BULLET_ANGLE = 5.238;

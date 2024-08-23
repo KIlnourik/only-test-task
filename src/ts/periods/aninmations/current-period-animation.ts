@@ -12,13 +12,13 @@ function currentPeriodAnimate(oldText: string, item: string): void {
     });
 }
 
-function initCurrentPeriodAnimation() {
-  const oldFrom: string = document.querySelector('.swiper-slide-active .period__from').textContent;
-  const oldTo: string = document.querySelector('.swiper-slide-active .period__to').textContent;
+function initCurrentPeriodAnimation(block: HTMLDivElement) {
+  const oldFrom: string = block.querySelector('.swiper-slide-active .period__from').textContent;
+  const oldTo: string = block.querySelector('.swiper-slide-active .period__to').textContent;
 
-  const prevBtn: HTMLButtonElement = document.querySelector('.controls__nav-btn--prev');
-  const nextBtn: HTMLButtonElement = document.querySelector('.controls__nav-btn--next');
-  const bulletBlock: HTMLElement = document.querySelector('.controls__pagination');
+  const prevBtn: HTMLButtonElement = block.querySelector('.controls__nav-btn--prev');
+  const nextBtn: HTMLButtonElement = block.querySelector('.controls__nav-btn--next');
+  const bulletBlock: HTMLElement = block.querySelector('.controls__pagination');
 
   function animate() {
     currentPeriodAnimate(oldFrom, '.swiper-slide-active .period__from');

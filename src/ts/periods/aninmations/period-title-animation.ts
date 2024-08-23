@@ -1,8 +1,9 @@
 import { gsap } from 'gsap';
 
-function periodTitleAnimate(): void {
+function periodTitleAnimate(block: HTMLDivElement): void {
+  const slideTitle = block.querySelector('.swiper-slide .period__title');
   if (document.documentElement.clientWidth >= 320 && document.documentElement.clientWidth < 1024) {
-    gsap.fromTo('.swiper-slide .period__title',
+    gsap.fromTo(slideTitle,
       {
         x: 0,
         y: 30,

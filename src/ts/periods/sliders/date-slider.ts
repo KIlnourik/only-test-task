@@ -2,8 +2,8 @@ import Swiper from 'swiper';
 import { SwiperOptions } from 'swiper/types';
 import { Navigation } from 'swiper/modules';
 
-function initDateSlider(): void {
-  const period: HTMLElement = document.querySelector('.period--active');
+function initDateSlider(block: HTMLDivElement): void {
+  const period: HTMLElement = block.querySelector('.period--active');
   const slider: HTMLElement = period.querySelector('.period__swiper');
 
   const swiperOptions: SwiperOptions = {
