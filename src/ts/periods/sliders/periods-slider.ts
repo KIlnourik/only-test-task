@@ -4,7 +4,7 @@ import { Navigation, Pagination, EffectCreative } from 'swiper/modules';
 import { initDateSlider } from './date-slider';
 import { setCirclePosition } from '../pagination';
 import { initAnimations } from '../aninmations';
-import { initCurrentPeriodAnimation, currentPeriodAnimate } from '../aninmations/current-period-animation';
+import { initCurrentPeriodAnimation } from '../aninmations/current-period-animation';
 import { animateBullets } from '../aninmations/pagination-animation';
 
 function initPeriodsSlider(): void {
@@ -47,6 +47,8 @@ function initPeriodsSlider(): void {
     allowTouchMove: false,
   };
 
+  const periodsSwiper: Swiper = new Swiper(periodsSlider, periodsSwiperOptions);
+
   function setActivePeriod(): void {
     const periods: NodeListOf<HTMLElement> = document.querySelectorAll('.period');
 
@@ -70,11 +72,7 @@ function initPeriodsSlider(): void {
 
     const currentSlideIndex = ++periodsSwiper.realIndex;
     currentSlide.textContent = `0${currentSlideIndex}`;
-  };
-
-  const periodsSwiper: Swiper = new Swiper(periodsSlider, periodsSwiperOptions);
-
-  periodsSwiper.fadeEffect
+  }
 
   periodsSwiper.on('init', () => {
     setActivePeriod();

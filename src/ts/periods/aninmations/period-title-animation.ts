@@ -1,6 +1,6 @@
 import { gsap } from 'gsap';
 
-function periodTitleAnimate() {
+function periodTitleAnimate(): void {
   if (document.documentElement.clientWidth >= 320 && document.documentElement.clientWidth < 1024) {
     gsap.fromTo('.swiper-slide .period__title',
       {
@@ -14,7 +14,7 @@ function periodTitleAnimate() {
         opacity: 1,
         duration: 1,
         delay: 0.01,
-        ease: "power2.out",
+        ease: 'power2.out',
       }
     );
   } else {
@@ -28,10 +28,10 @@ function periodTitleAnimate() {
         opacity: 1,
         duration: 2,
         delay: 0.01,
-        ease: "power2.out",
+        ease: 'power2.out',
       }
     );
   }
-};
+}
 
 export { periodTitleAnimate };

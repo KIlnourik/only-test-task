@@ -11,10 +11,10 @@ function getActiveBulletCoords(): activeBulletCoords {
   const activeBulletY = RADIUS * Math.sin(ACTIVE_BULLET_ANGLE);
 
   return {
-    left: 49.5 + activeBulletX + '%',
-    top: 49.5 + activeBulletY + '%'
-  }
-};
+    left: `${49.5 + activeBulletX}%`,
+    top: `${49.5 + activeBulletY}%`
+  };
+}
 
 function setCirclePosition(): void {
   const pagination: HTMLDivElement = document.querySelector('.controls__pagination');
@@ -36,11 +36,10 @@ function setCirclePosition(): void {
     const y = RADIUS * Math.sin(angle + ACTIVE_BULLET_ANGLE);
 
     if (!bullets[i].classList.contains('controls__pagination-item--active')) {
-      bullets[i].style.left = 49.5 + x + '%';
-      bullets[i].style.top = 49.5 + y + '%';
+      bullets[i].style.left = `${49.5 + x}%`;
+      bullets[i].style.top = `${49.5 + y}%`;
     }
-
   }
-};
+}
 
 export { setCirclePosition, getActiveBulletCoords };
